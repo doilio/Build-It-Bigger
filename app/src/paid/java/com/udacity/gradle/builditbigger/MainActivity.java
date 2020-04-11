@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.doiliomatsinhe.androidlibrary.JokeActivity;
 
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Exception e) {
                 hideLoadingIndicator();
 
+                Toast.makeText(getApplicationContext(),"Make sure you have an active Internet connection", Toast.LENGTH_LONG).show();
                 Log.d(TAG, getString(R.string.failure) + e.getMessage());
 
             }
