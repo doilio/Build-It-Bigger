@@ -1,7 +1,7 @@
-Apr 11, 2020 5:25:15 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Apr 11, 2020 8:02:33 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'E:\Work\JokeApp\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-2020-04-11 17:25:15.856:INFO::main: Logging initialized @5798ms to org.eclipse.jetty.util.log.StdErrLog
-2020-04-11 17:25:15.915:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+2020-04-11 20:02:33.697:INFO::main: Logging initialized @467ms to org.eclipse.jetty.util.log.StdErrLog
+2020-04-11 20:02:33.753:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
 java.io.IOException: Failed to bind to localhost/127.0.0.1:8080
 	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:346)
 	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:307)
