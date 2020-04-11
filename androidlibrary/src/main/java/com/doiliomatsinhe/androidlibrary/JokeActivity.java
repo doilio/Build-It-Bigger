@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
-public class JokeActivity extends AppCompatActivity {
+public class JokeActivity extends AppCompatActivity{
 
     public static final String JOKE = "joke";
 
