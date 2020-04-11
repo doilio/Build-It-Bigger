@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.doiliomatsinhe.androidlibrary.JokeActivity;
 
@@ -17,16 +18,20 @@ import static com.doiliomatsinhe.androidlibrary.JokeActivity.JOKE;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
+    private ProgressBar loading;
+    private Button jokeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button jokeButton = findViewById(R.id.button_text);
+        loading = findViewById(R.id.progressBar);
+        jokeButton = findViewById(R.id.button_text);
         jokeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showLoadingIndicator();
                 makeCallToGetJoke();
             }
         });
@@ -34,10 +39,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void showLoadingIndicator() {
+        loading.setVisibility(View.VISIBLE);
+        jokeButton.setVisibility(View.GONE);
+    }
+
+    private void hideLoadingIndicator() {
+        loading.setVisibility(View.GONE);
+        jokeButton.setVisibility(View.VISIBLE);
+    }
+
     private void makeCallToGetJoke() {
         EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask(new OnEventListener<String>() {
             @Override
             public void onSuccess(String message) {
+                hideLoadingIndicator();
                 Log.d(TAG, getString(R.string.success) + message);
 
                 Intent i = new Intent(getApplicationContext(), JokeActivity.class);
@@ -47,12 +63,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Exception e) {
+                hideLoadingIndicator();
 
                 Log.d(TAG, getString(R.string.failure) + e.getMessage());
 
             }
         });
         endpointsAsyncTask.execute();
+
     }
 
     @Override
