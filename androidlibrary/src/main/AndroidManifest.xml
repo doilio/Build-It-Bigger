@@ -3,7 +3,8 @@
     package="com.doiliomatsinhe.androidlibrary">
 
     <application>
-        <activity android:name=".JokeActivity"></activity>
+        <activity android:name=".JokeActivity"
+            android:label="My Joke"/>
     </application>
 
 </manifest>
