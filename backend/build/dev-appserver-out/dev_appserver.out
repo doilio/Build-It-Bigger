@@ -1,23 +1,23 @@
-Apr 11, 2020 11:10:35 AM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Apr 11, 2020 11:23:13 AM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'E:\Work\JokeApp\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-2020-04-11 11:10:35.578:INFO::main: Logging initialized @655ms to org.eclipse.jetty.util.log.StdErrLog
-2020-04-11 11:10:35.646:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
-Apr 11, 2020 9:10:35 AM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+2020-04-11 11:23:13.217:INFO::main: Logging initialized @518ms to org.eclipse.jetty.util.log.StdErrLog
+2020-04-11 11:23:13.275:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+Apr 11, 2020 9:23:13 AM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
 WARNING: Your working directory, (E:\Work\JokeApp\FinalProject\backend) is not equal to your 
 web application root (E:\Work\JokeApp\FinalProject\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-2020-04-11 11:10:36.020:INFO:oejs.Server:main: jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_212-release-1586-b04
-2020-04-11 11:10:42.340:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@2ab4bc72{/,file:///E:/Work/JokeApp/FinalProject/backend/build/exploded-backend/,AVAILABLE}{E:\Work\JokeApp\FinalProject\backend\build\exploded-backend}
-2020-04-11 11:10:42.341:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
-2020-04-11 11:10:42.341:INFO:oejs.session:main: node0 Scavenging disabled
-2020-04-11 11:10:42.358:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@5f9d02cb{HTTP/1.1, (http/1.1)}{localhost:8080}
-2020-04-11 11:10:42.364:INFO:oejs.Server:main: Started @7441ms
-Apr 11, 2020 9:10:42 AM com.google.appengine.tools.development.AbstractModule startup
+2020-04-11 11:23:13.609:INFO:oejs.Server:main: jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_212-release-1586-b04
+2020-04-11 11:23:19.093:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@740fb309{/,file:///E:/Work/JokeApp/FinalProject/backend/build/exploded-backend/,AVAILABLE}{E:\Work\JokeApp\FinalProject\backend\build\exploded-backend}
+2020-04-11 11:23:19.093:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+2020-04-11 11:23:19.093:INFO:oejs.session:main: node0 Scavenging disabled
+2020-04-11 11:23:19.110:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@5f9d02cb{HTTP/1.1, (http/1.1)}{localhost:8080}
+2020-04-11 11:23:19.116:INFO:oejs.Server:main: Started @6416ms
+Apr 11, 2020 9:23:19 AM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8080/
-Apr 11, 2020 9:10:42 AM com.google.appengine.tools.development.AbstractModule startup
+Apr 11, 2020 9:23:19 AM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8080/_ah/admin
-Apr 11, 2020 11:10:42 AM com.google.appengine.tools.development.DevAppServerImpl doStart
+Apr 11, 2020 11:23:19 AM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
-Apr 11, 2020 11:11:44 AM com.google.appengine.tools.development.jetty9.LocalResourceFileServlet doGet
-WARNING: No file found for: /favicon.ico
+Apr 11, 2020 11:23:58 AM com.google.appengine.tools.development.jetty9.LocalResourceFileServlet doGet
+WARNING: No file found for: /fetchJokes

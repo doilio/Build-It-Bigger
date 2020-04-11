@@ -14,11 +14,4 @@ public class MyBean {
         return myData;
     }
 
-    /**
-     * Remove this later as it will not be needed
-     * @param data
-     */
-    public void setData(String data) {
-        myData = data;
-    }
 }
