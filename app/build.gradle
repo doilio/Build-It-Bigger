@@ -47,6 +47,9 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
 
-    // Joker Library
+    // Joker Java Library
     implementation project(':lib')
+
+    // Joker Android Library
+    implementation project(path: ':androidlibrary')
 }
