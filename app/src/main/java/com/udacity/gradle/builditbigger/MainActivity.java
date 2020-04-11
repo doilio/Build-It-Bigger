@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.doiliomatsinhe.androidlibrary.JokeActivity;
 import com.doiliomatsinhe.lib.Joker;
@@ -32,11 +31,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        new EndpointsAsyncTask(this).execute();
-
     }
 
-    static class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
+    class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
         // AsyncTask holds reference to activity so it's good to get a WeakReference
         // to avoid Memory leaks
         private WeakReference<Context> contextRef;
@@ -77,7 +74,9 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             Context context = contextRef.get();
             if (context != null) {
-                Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+                Intent i = new Intent(context, JokeActivity.class);
+                i.putExtra(JOKE, result);
+                startActivity(i);
             }
 
         }
@@ -108,12 +107,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
+        // This Should'n work on the final version
+        // Remove dependency later
         Joker joker = new Joker();
         String joke = joker.getJoke();
 
-        Intent i = new Intent(this, JokeActivity.class);
-        i.putExtra(JOKE, joke);
-        startActivity(i);
+        // Make request
+        new EndpointsAsyncTask(this).execute();
+        //        Intent i = new Intent(this, JokeActivity.class);
+        //        i.putExtra(JOKE, joke);
+        //        startActivity(i);
+
     }
 
 
